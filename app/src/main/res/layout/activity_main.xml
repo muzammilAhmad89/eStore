@@ -107,6 +107,10 @@
             android:text="Create Account"
             android:paddingLeft="4dp"
             android:gravity="center" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit"/>
     </LinearLayout>
     <ProgressBar
         android:layout_width="wrap_content"
