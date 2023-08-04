@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WelCome Back !"
+        android:fontFamily="serif"
+        android:paddingVertical="80dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingBottom="7dp"
+        android:text="UserName or Email Address"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/EditTextUserName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="15dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:hint=" Username"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:textSize="14sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginLeft="15dp"
+        android:paddingVertical="7dp"
+        android:text="Password"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/EditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="10dp"
+        android:autofillHints="password"
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:hint=" Password"
+        android:textColorHint="@color/black"
+        android:inputType="numberPassword"
+        android:paddingStart="10dp"
+        android:textSize="14dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/TvForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="3dp"
+        android:text="Forgot password?"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnLogin"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:background="@drawable/ripplebtn"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:orientation="horizontal">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="New to FashionHub?"
+            android:textSize="15dp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/CreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:text="Create Account"
+            android:paddingLeft="4dp"
+            android:gravity="center" />
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pb"/>
+</LinearLayout>
