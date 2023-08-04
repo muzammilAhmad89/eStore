@@ -50,19 +50,7 @@
         android:textColor="@color/white"
         android:textSize="10sp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/EditTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="10dp"
-        android:autofillHints="password"
-        android:background="@drawable/background_edit_text"
-        android:drawableStart="@drawable/baseline_lock_24"
-        android:hint=" Password"
-        android:textColorHint="@color/black"
-        android:inputType="numberPassword"
-        android:paddingStart="10dp"
-        android:textSize="14dp" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/TvForget"
@@ -107,6 +95,10 @@
             android:text="Create Account"
             android:paddingLeft="4dp"
             android:gravity="center" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit"/>
     </LinearLayout>
     <ProgressBar
         android:layout_width="wrap_content"
