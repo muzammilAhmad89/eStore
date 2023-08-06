@@ -150,14 +150,15 @@
                     android:layout_gravity="center_vertical"/>
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvsignup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign Up"
                     android:textColor="#07635D"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_15ssp"
+                    android:textSize="@dimen/_13ssp"
                     android:paddingStart="5dp"
-                    android:paddingLeft="1dp"
+                    android:paddingEnd="@dimen/_1sdp"
                     android:layout_gravity="center_vertical"/>
 
             </LinearLayout>
