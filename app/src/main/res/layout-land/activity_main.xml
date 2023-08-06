@@ -32,13 +32,13 @@
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/greenellipse" />
 
-            <!--            <com.google.android.material.imageview.ShapeableImageView-->
-            <!--                android:id="@+id/backarrow"-->
-            <!--                android:layout_width="@dimen/_20sdp"-->
-            <!--                android:layout_height="@dimen/_10sdp"-->
-            <!--                android:layout_marginStart="@dimen/_5sdp"-->
-            <!--                android:layout_marginTop="@dimen/_20sdp"-->
-            <!--                android:src="@drawable/barrow" />-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/backarrow"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/barrow" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -72,8 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layoutemail"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginVertical="@dimen/_10sdp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etpassword"
@@ -89,9 +88,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/layoutpassword"
-            android:layout_marginStart="@dimen/_10sdp"
             android:text="Forgot Password ?"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_13sdp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnsignin"
@@ -123,47 +122,18 @@
                 android:id="@+id/google"
                 android:layout_width="@dimen/_90sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/drawablefacebook" />
+                android:background="@drawable/drawablefacebook"
+                />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_below="@+id/layoutauth"
-            android:background="#FF7A30"
-            android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/layoutbottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_20sdp"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true">
 
-            <LinearLayout
-                android:id="@+id/layoutbottom"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Don't have an account?"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12ssp"
-                    android:layout_gravity="center_vertical"/>
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Up"
-                    android:textColor="#07635D"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_15ssp"
-                    android:paddingStart="5dp"
-                    android:paddingLeft="1dp"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
+</LinearLayout>
     </RelativeLayout>
 
 </ScrollView>
