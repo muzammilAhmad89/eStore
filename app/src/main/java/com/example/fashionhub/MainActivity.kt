@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fashionhub.databinding.ActivityMainBinding
-import com.google.android.material.textview.MaterialTextView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var signup: MaterialTextView
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@MainActivity, home_activity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this, "Log In failed", Toast.LENGTH_SHORT).show()
                 }
