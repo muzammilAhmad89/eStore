@@ -47,76 +47,75 @@
         </RelativeLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutemail"
+            android:id="@+id/layoutname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/relativeellipse"
             android:layout_marginVertical="@dimen/_10sdp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etemail"
+                android:id="@+id/etname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
                 android:textColor="@color/white"
-                android:text="Email" />
+                android:hint="Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutname"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etemail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="oes3765@gmail.com"/>
+        </com.google.android.material.textfield.TextInputLayout><com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layoutemail"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="5dp"
+        app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:text="Password"
+                android:hint="Password"
                 android:textColor="@color/white"/>
-        </com.google.android.material.textfield.TextInputLayout><com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutconfirmpassword"
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutcmppassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layoutpassword"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="5dp"
-        app:endIconMode="password_toggle">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etconfirmpassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawablePadding="@dimen/_10sdp"
-                android:text="Password"
-                android:textColor="@color/white"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layoutconfirmpassword"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="5dp"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etname"
+                android:id="@+id/etcmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:text="Confirm Password"
+                android:hint="Confirm Password"
                 android:textColor="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnsignin"
+            android:id="@+id/btnsignup"
             android:layout_width="@dimen/_210sdp"
             android:layout_height="@dimen/_43sdp"
-            android:layout_below="@+id/layoutname"
+            android:layout_below="@+id/layoutcmppassword"
             android:layout_marginStart="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_14sdp"
             android:text="SIGN Up"
@@ -127,7 +126,7 @@
             android:id="@+id/layoutauth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnsignin"
+            android:layout_below="@+id/btnsignup"
             android:layout_marginVertical="@dimen/_30sdp"
             android:orientation="horizontal">
 

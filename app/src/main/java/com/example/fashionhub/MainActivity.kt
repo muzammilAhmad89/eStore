@@ -1,22 +1,50 @@
 package com.example.fashionhub
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.fashionhub.databinding.ActivityMainBinding
 import com.google.android.material.textview.MaterialTextView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
-    lateinit var signup: MaterialTextView;
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var signup: MaterialTextView
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        signup=findViewById(R.id.tvsignup);
-        signup.setOnClickListener {
-            val intent=Intent(this,ActivitySignUp::class.java);
-            startActivity(intent);
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+
+
+        binding.tvsignup?.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ActivitySignUp::class.java))
+        }
+
+        binding.btnsignin.setOnClickListener {
+            signInUser()
+        }
+    }
+
+    private fun signInUser() {
+        val email = binding.etemail.text.toString()
+        val pass = binding.etpassword.text.toString()
+
+        if (email.isBlank() || pass.isBlank()) {
+            Toast.makeText(this@MainActivity, "Please input email and password", Toast.LENGTH_SHORT).show()
+            return
+        } else {
+            auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
+                if (it.isSuccessful) {
+                    Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@MainActivity, home_activity::class.java))
+                } else {
+                    Toast.makeText(this, "Log In failed", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 }
