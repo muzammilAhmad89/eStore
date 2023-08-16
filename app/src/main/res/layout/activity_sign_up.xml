@@ -7,11 +7,19 @@
     android:background="#FFFFFF"
     tools:ignore="HardcodedText">
 
+
     <RelativeLayout
         android:id="@+id/relativeparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#07635D">
+       <!-- <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#3A12A3"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
 
         <RelativeLayout
             android:id="@+id/relativeellipse"
