@@ -19,7 +19,7 @@
             android:name=".ActivityAdminPanel"
             android:exported="false"></activity>
         <activity
-            android:name=".itemDetails"
+            android:name=".ActivityItemDetails"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

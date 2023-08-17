@@ -1,4 +1,4 @@
-package com.example.fashionhub
+package com.example.fashionhub.Model
 
 import android.os.Parcel
 import android.os.Parcelable

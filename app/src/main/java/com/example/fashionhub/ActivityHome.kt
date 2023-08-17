@@ -4,14 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.navigation.NavigationView
@@ -109,7 +107,7 @@ class ActivityHome : AppCompatActivity() {
                     adapter.setOnClickListener(object : CustomAdapter.OnClickListener {
                         override fun onClick(position: Int, item: Items) {
                             // Handle the item click here
-                            val intent = Intent(this@ActivityHome, itemDetails::class.java)
+                            val intent = Intent(this@ActivityHome, ActivityItemDetails::class.java)
                             intent.putExtra("selectedItem", item)
                             startActivity(intent)
                         }
