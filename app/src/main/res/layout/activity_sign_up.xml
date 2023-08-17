@@ -62,12 +62,12 @@
             android:layout_marginVertical="@dimen/_10sdp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etemail"
+                android:id="@+id/etname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
                 android:textColor="@color/white"
-                android:text="Email" />
+                android:text="name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -79,11 +79,11 @@
             android:layout_marginBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etpassword"
+                android:id="@+id/etemail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:text="Password"
+                android:hint="Email"
                 android:textColor="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout><com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutconfirmpassword"
@@ -95,7 +95,7 @@
         app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etconfirmpassword"
+                android:id="@+id/etpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
@@ -112,7 +112,7 @@
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etname"
+                android:id="@+id/etcmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
@@ -121,7 +121,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnsignin"
+            android:id="@+id/btnsignup"
             android:layout_width="@dimen/_210sdp"
             android:layout_height="@dimen/_43sdp"
             android:layout_below="@+id/layoutname"
@@ -135,7 +135,7 @@
             android:id="@+id/layoutauth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnsignin"
+            android:layout_below="@+id/btnsignup"
             android:layout_marginVertical="@dimen/_30sdp"
             android:orientation="horizontal">
 
@@ -147,7 +147,7 @@
                 android:background="@drawable/drawablefacebook" />
 
             <View
-                android:id="@+id/google"
+                android:id="@+id/googlesignin"
                 android:layout_width="@dimen/_90sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:background="@drawable/drawablefacebook" />

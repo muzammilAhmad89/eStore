@@ -1,19 +1,14 @@
 package com.example.fashionhub
 
 import android.content.Intent
-<<<<<<< HEAD
-import android.os.Bundle
-=======
->>>>>>> origin/master
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import com.example.fashionhub.databinding.ActivityMainBinding
 import com.google.android.material.textview.MaterialTextView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
-<<<<<<< HEAD
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var utils: Utils
@@ -43,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             authentication.login(binding.etemail.text.toString(), binding.etpassword.text.toString(), object :
                 classAutentication.LoginCallback {
                 override fun onSuccess() {
-                    startActivity(Intent(this@MainActivity, home_activity::class.java))
+                    startActivity(Intent(this@MainActivity, ActivityHome::class.java))
                     finish()
                 }
 
@@ -54,16 +49,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-=======
-    lateinit var signup: MaterialTextView;
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        signup=findViewById(R.id.tvsignup);
-        signup.setOnClickListener {
-            val intent=Intent(this,ActivitySignUp::class.java);
-            startActivity(intent);
-        }
-    }
-}
->>>>>>> origin/master

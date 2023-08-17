@@ -21,7 +21,7 @@ class ActivitySplash : AppCompatActivity() {
             if (user != null && user.isEmailVerified) {
                 startActivity(Intent(this@ActivitySplash, MainActivity::class.java))
             } else {
-                startActivity(Intent(this@ActivitySplash, home_activity::class.java))
+                startActivity(Intent(this@ActivitySplash, ActivityHome::class.java))
             }
             finish()
         }, SPLASH_DELAY)

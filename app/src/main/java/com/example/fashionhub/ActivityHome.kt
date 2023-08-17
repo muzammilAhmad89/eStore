@@ -36,7 +36,7 @@ class ActivityHome : AppCompatActivity() {
 
         cardViewWomen.setOnClickListener {
 
-            val intent = Intent(this@ActivityHome, ActivityCurrentUser::class.java)
+            val intent = Intent(this@ActivityHome, MainActivity::class.java)
             startActivity(intent)
         }
 
