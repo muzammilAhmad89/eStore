@@ -27,12 +27,18 @@
                 >
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/productName"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_150sdp"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/_30sdp"
                     android:text="first"
                     android:layout_marginVertical="@dimen/_20sdp"
                     />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="wrap_content"
+                    android:text="1st"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/_20sdp"/>
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/productPrice"
                     android:layout_width="match_parent"
