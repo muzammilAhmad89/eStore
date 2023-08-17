@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "128315699726-8lo7rfhci08mfl17l3q13j2uucef0un2.apps.googleusercontent.com",
+          "client_id": "128315699726-82jd93ifbchk91ekg36oaujeqdj8vdc5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fashionhub",
+            "certificate_hash": "215c7cd9a74edf9e681186e6b9a7ba3321d7da19"
+          }
+        },
+        {
+          "client_id": "128315699726-u3j59i4elm87og9rqhai0jge1g7eef04.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

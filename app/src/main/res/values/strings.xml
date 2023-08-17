@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FashionHub</string>
-    <string name="default_web_client_id">128315699726-8lo7rfhci08mfl17l3q13j2uucef0un2.apps.googleusercontent.com</string>
+    <string name="app_name">Fashion Hub</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
 </resources>

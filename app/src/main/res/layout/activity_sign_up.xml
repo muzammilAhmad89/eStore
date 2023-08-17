@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/esignup" />
+                android:src="@drawable/ellipseredd" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/backarrow"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:text="Create \nAccount"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_23ssp"
@@ -55,75 +55,76 @@
         </RelativeLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutname"
+            android:id="@+id/layoutemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/relativeellipse"
             android:layout_marginVertical="@dimen/_10sdp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawablePadding="@dimen/_10sdp"
-                android:textColor="@color/white"
-                android:hint="Name" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutemail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layoutname"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etemail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:hint="oes3765@gmail.com"/>
-        </com.google.android.material.textfield.TextInputLayout><com.google.android.material.textfield.TextInputLayout
+                android:textColor="@color/white"
+                android:text="Email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layoutemail"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="5dp"
-        app:endIconMode="password_toggle">
+            android:layout_marginBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:hint="Password"
+                android:text="Password"
                 android:textColor="@color/white"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutcmppassword"
+        </com.google.android.material.textfield.TextInputLayout><com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutconfirmpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layoutpassword"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="5dp"
-            app:endIconMode="password_toggle">
+        app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etcmpassword"
+                android:id="@+id/etconfirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="@dimen/_10sdp"
-                android:hint="Confirm Password"
+                android:text="Password"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutconfirmpassword"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="5dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:text="Confirm Password"
                 android:textColor="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnsignup"
+            android:id="@+id/btnsignin"
             android:layout_width="@dimen/_210sdp"
             android:layout_height="@dimen/_43sdp"
-            android:layout_below="@+id/layoutcmppassword"
+            android:layout_below="@+id/layoutname"
             android:layout_marginStart="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_14sdp"
             android:text="SIGN Up"
@@ -134,26 +135,22 @@
             android:id="@+id/layoutauth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnsignup"
+            android:layout_below="@+id/btnsignin"
             android:layout_marginVertical="@dimen/_30sdp"
             android:orientation="horizontal">
 
-            <com.google.android.material.button.MaterialButton
+            <View
                 android:id="@+id/facebook"
                 android:layout_width="@dimen/_90sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginHorizontal="@dimen/_40sdp" />
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:background="@drawable/drawablefacebook" />
 
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/google"-->
-<!--                android:layout_width="@dimen/_90sdp"-->
-<!--                android:layout_height="@dimen/_40sdp" />-->
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/googlesignin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-
+            <View
+                android:id="@+id/google"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/drawablefacebook" />
         </LinearLayout>
 
         <LinearLayout

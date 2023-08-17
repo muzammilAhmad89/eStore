@@ -3,9 +3,9 @@ package com.example.fashionhub
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class itemDetails : AppCompatActivity() {
+class ActivityCurrentUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_item_details)
+        setContentView(R.layout.activity_current_user)
     }
 }
