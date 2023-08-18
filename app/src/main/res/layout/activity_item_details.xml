@@ -193,7 +193,7 @@
                         android:id="@+id/countTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="6566"
                         android:textSize="@dimen/_20sdp"
                         android:gravity="center_vertical"
                         android:layout_marginHorizontal="@dimen/_10sdp"
