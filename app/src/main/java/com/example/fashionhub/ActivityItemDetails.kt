@@ -19,8 +19,9 @@ class ActivityItemDetails : AppCompatActivity() {
 
         // Display the item details if available
         if (selectedItem != null) {
-            binding?.productName?.text = selectedItem.product?.toString()
-            binding?.productPrice?.text = selectedItem.price?.toString()
+            binding?.productName?.text = selectedItem.discount?.toString()
+            binding?.productPrice?.text = "$${selectedItem.reducedPrice}"
+
             // Display other details as needed
         }
     }
