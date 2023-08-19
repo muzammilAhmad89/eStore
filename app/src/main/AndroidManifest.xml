@@ -15,8 +15,11 @@
         android:theme="@style/Theme.FashionHub"
         tools:targetApi="31">
         <activity
+            android:name=".Ui.ActivityCart"
+            android:exported="false" />
+        <activity
             android:name=".ActivitySplash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".ActivityAdminPanel"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ActivityItemDetails"
             android:exported="false" />
@@ -37,11 +40,10 @@
             android:exported="false" />
         <activity
             android:name=".ActivityCurrentUser"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ActivityHome"
-            android:exported="false"/>
-
+            android:exported="false" />
     </application>
 
 </manifest>

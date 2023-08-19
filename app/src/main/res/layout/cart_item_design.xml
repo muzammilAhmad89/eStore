@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:cardElevation="@dimen/_5sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCart"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/baseline_person_24"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cartDescription"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="dummy text"
+                android:layout_toRightOf="@+id/imgCart"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignBottom="@+id/cartDescription"
+                android:layout_marginBottom="-23dp"
+                android:layout_toRightOf="@+id/imgCart"
+                android:text="size"
+                android:textColor="@color/grey" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:text="price in rupees"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/imgCart"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
