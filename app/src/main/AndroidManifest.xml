@@ -8,17 +8,17 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/e"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/e"
         android:supportsRtl="true"
         android:theme="@style/Theme.FashionHub"
         tools:targetApi="31">
         <activity
-            android:name=".Ui.ActivityCart"
+            android:name=".ui.ActivityCart"
             android:exported="false" />
         <activity
-            android:name=".ActivitySplash"
+            android:name=".ui.ActivitySplash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,22 +27,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityAdminPanel"
+            android:name=".ui.ActivityAdminPanel"
             android:exported="false" />
         <activity
-            android:name=".ActivityItemDetails"
+            android:name=".ui.ActivityItemDetails"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivitySignUp"
+            android:name=".ui.ActivitySignUp"
             android:exported="false" />
         <activity
-            android:name=".ActivityCurrentUser"
+            android:name=".ui.ActivityCurrentUser"
             android:exported="false" />
         <activity
-            android:name=".ActivityHome"
+            android:name=".ui.ActivityHome"
             android:exported="false" />
     </application>
 

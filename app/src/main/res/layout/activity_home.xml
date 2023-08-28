@@ -6,7 +6,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityHome">
+    tools:context=".ui.ActivityHome">
 
 
     <LinearLayout
@@ -17,21 +17,24 @@
             android:id="@+id/topSection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:paddingHorizontal="@dimen/_25sdp">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_width="@dimen/_70sdp"
                 android:layout_height="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_23sdp"/>
+                />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/user"
                 android:layout_alignParentRight="true"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
                 app:cardCornerRadius="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_30sdp"
                 android:clickable="true"
+                android:layout_centerVertical="true"
                 app:cardBackgroundColor="@color/black"
                 android:focusable="true" />
 
@@ -45,11 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools">
+                android:layout_height="match_parent">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,18 +179,82 @@
 
                         </LinearLayout>
                     </HorizontalScrollView>
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                            <include layout="@layout/shimmer_for_item" />
+
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:listitem="@layout/item_design"
+                        android:layout_marginBottom="@dimen/_60sdp"
                         android:padding="@dimen/_10sdp"/>
                 </LinearLayout>
 
 
             </ScrollView>
         </androidx.core.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_above="@+id/bottomNav"
+            android:layout_marginTop="-70dp"
+            >
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                app:menu="@menu/bottom_navigation"
+                android:layout_gravity="bottom"
+                android:scrollIndicators="left">
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_horizontal"
+                app:fabSize="normal"
+                android:src="@drawable/icons_search"
+                android:backgroundTint="@color/primary"
+                />
+
+
+        </FrameLayout>
+
+
+
     </LinearLayout>
 
     <!-- NavigationView for the left swipe menu -->

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222021"
-    tools:context=".ActivitySplash">
+    android:background="@color/white"
+    tools:context=".ui.ActivitySplash">
 <com.google.android.material.imageview.ShapeableImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@drawable/fashionhubsplash"/>
+    android:src="@drawable/e_store"/>
 </RelativeLayout>

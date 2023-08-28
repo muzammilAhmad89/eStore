@@ -1,9 +1,9 @@
-package com.example.fashionhub
+package com.example.fashionhub.data
 
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Items(
+data class ProductItem(
     var discount: Any? = null,
     var price: Any? = null,
     var product: Any? = null,
@@ -27,12 +27,12 @@ data class Items(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Items> {
-        override fun createFromParcel(parcel: Parcel): Items {
-            return Items(parcel)
+    companion object CREATOR : Parcelable.Creator<ProductItem> {
+        override fun createFromParcel(parcel: Parcel): ProductItem {
+            return ProductItem(parcel)
         }
 
-        override fun newArray(size: Int): Array<Items?> {
+        override fun newArray(size: Int): Array<ProductItem?> {
             return arrayOfNulls(size)
         }
     }

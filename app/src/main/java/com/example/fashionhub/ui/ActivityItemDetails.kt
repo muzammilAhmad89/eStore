@@ -1,10 +1,17 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
+import com.example.fashionhub.data.Items
+import com.example.fashionhub.Model.ItemToCartModel
+import com.example.fashionhub.R
 import com.example.fashionhub.databinding.ActivityItemDetailsBinding
+import com.google.firebase.FirebaseApp
+import com.google.firebase.database.FirebaseDatabase
 
 class ActivityItemDetails : AppCompatActivity() {
 
@@ -14,10 +21,50 @@ class ActivityItemDetails : AppCompatActivity() {
     private var selectedCard: CardView?=null
     private var selectedText: TextView?=null
 
+    // Declare the product variables globally
+    private var productName: String = ""
+    private var productPriceString: String = ""
+    private var selectedSize: String=""
+    private var productPrice:Double=0.0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityItemDetailsBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
+        setContentView(binding.root)
+
+        FirebaseApp.initializeApp(this)
+        val db=FirebaseDatabase.getInstance().getReference("cart")
+
+        binding.cartIcon.setOnClickListener {
+            startActivity(Intent(this@ActivityItemDetails,ActivityCart::class.java))
+        }
+
+
+        binding.btnAddToCart.setOnClickListener {
+
+
+            if (selectedSize.isNotEmpty() && itemCount!=0){
+
+                val product = ItemToCartModel(productName, productPriceString, selectedSize, itemCount.toString())
+
+                db.child(productName).setValue(product).addOnSuccessListener {
+
+                    Toast.makeText(this,"added to cart", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener{
+                    Toast.makeText(this,"Failed to add", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+
+            else{
+                if (itemCount==0){
+                    Toast.makeText(this,"please select the quantity",Toast.LENGTH_SHORT).show()
+                }
+
+                else Toast.makeText(this@ActivityItemDetails,"please select the size",Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
         binding.backarrow.setOnClickListener {
             super.onBackPressed()
@@ -51,8 +98,13 @@ class ActivityItemDetails : AppCompatActivity() {
 
         // Display the item details if available
         if (selectedItem != null) {
-            binding?.productName?.text = selectedItem.discount?.toString()
-            binding?.productPrice?.text = "$${selectedItem.reducedPrice}"
+            productName = selectedItem.discount?.toString() ?: ""
+            productPriceString = selectedItem.reducedPrice.toString()
+            productPrice =productPriceString.toDouble()
+
+            binding.productName.text = productName
+            binding.productPrice.text = productPriceString
+
 
             // Display other details as needed
         }
@@ -71,6 +123,7 @@ class ActivityItemDetails : AppCompatActivity() {
         selectedText?.setTextColor(resources.getColor(android.R.color.white))
 
         // Perform other actions for the selected product
+        selectedSize=clickedTextView.text.toString()
     }
 
     private fun updateCounter() {

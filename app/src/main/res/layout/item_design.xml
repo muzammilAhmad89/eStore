@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_160sdp"
+    android:layout_width="@dimen/_150sdp"
     android:layout_height="wrap_content"
     android:paddingHorizontal="@dimen/_10sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,55 +15,74 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
-
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
                 >
+                <LinearLayout
+                    android:id="@+id/productImgLayout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/productImg"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:src="@drawable/baseline_person_24" />
 
-                <ImageView
-                    android:id="@+id/productImg"
-                    android:layout_width="@dimen/_120sdp"
-                    android:layout_height="@dimen/_90sdp"
-                    android:src="@drawable/baseline_person_24" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productImgLayout"
+                    android:orientation="vertical"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/productInfo"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="a brief info of product with some extraff fefda er "
+                            android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/productInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/productImg"
-                    android:layout_alignBottom="@+id/productImg"
-                    android:layout_marginTop="-20dp"
-                    android:text="a brief info of product"
-                    android:textStyle="bold" />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="price"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_below="@+id/productInfo"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/actualPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="actual"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="#9e9997"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_below="@id/productInfo"
+                            android:layout_toRightOf="@+id/price"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="off"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textColor="#f29f2f"
+                            android:layout_below="@id/productInfo"
+                            android:layout_toRightOf="@id/actualPrice"
+                            android:layout_marginLeft="@dimen/_8sdp"/>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="price"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_13sdp"
-                    android:layout_below="@+id/productInfo"/>
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/actualPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="actual"
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="#9e9997"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:layout_below="@id/productInfo"
-                    android:layout_toRightOf="@+id/price"
-                    android:layout_marginLeft="@dimen/_10sdp"/>
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/discount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="off"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:textColor="#f29f2f"
-                    android:layout_below="@id/productInfo"
-                    android:layout_toRightOf="@id/actualPrice"
-                    android:layout_marginLeft="@dimen/_8sdp"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
 
 
             </RelativeLayout>

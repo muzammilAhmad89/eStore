@@ -1,9 +1,9 @@
-package com.example.fashionhub.Ui
+package com.example.fashionhub.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.fashionhub.Data.ProductItem
+import com.example.fashionhub.data.ProductItem
 import com.example.fashionhub.databinding.ActivityAdminPanelBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

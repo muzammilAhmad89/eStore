@@ -1,9 +1,10 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -11,6 +12,13 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fashionhub.adapters.CustomAdapter
+import com.facebook.shimmer.ShimmerFrameLayout
+import androidx.fragment.app.Fragment
+import com.example.fashionhub.data.Items
+import com.example.fashionhub.R
+import com.example.fashionhub.fragments.fragment_like
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.database.DataSnapshot
@@ -27,16 +35,43 @@ class ActivityHome : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
+    private lateinit var shimmer: ShimmerFrameLayout
+    lateinit var bottomNav : BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        bottomNav = findViewById(R.id.bottomNav) as BottomNavigationView
+        bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> {
+                    startActivity(Intent(this, ActivityHome::class.java))
+                    true
+                }
+                R.id.like -> {
+                    loadFragment(fragment_like())
+                    true
+                }
+                R.id.cart -> {
+                    startActivity(Intent(this,ActivityCart::class.java))
+                    true
+                }
+                R.id.notification -> {
+                    true
+                }
+                else -> {
+                    Toast.makeText(this,"error",Toast.LENGTH_SHORT).show()
+                    true
+                }
+            }
+        }
+
         val cardViewWomen: MaterialCardView = findViewById(R.id.user)
 
         cardViewWomen.setOnClickListener {
 
-            val intent = Intent(this@ActivityHome, MainActivity::class.java)
+            val intent = Intent(this@ActivityHome, ActivityCart::class.java)
             startActivity(intent)
         }
 
@@ -54,7 +89,10 @@ class ActivityHome : AppCompatActivity() {
         navView = findViewById(R.id.navView)
 
         // Set up the ActionBarDrawerToggle
-        actionBarToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer)
+        actionBarToggle = ActionBarDrawerToggle(this, drawerLayout,
+            R.string.open_drawer,
+            R.string.close_drawer
+        )
         drawerLayout.addDrawerListener(actionBarToggle)
 
         // Set up the navigation item click listener
@@ -62,18 +100,18 @@ class ActivityHome : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_home -> {
                     // Handle Home click
-                    startActivity(Intent(this@ActivityHome,ActivityHome::class.java))
+                    startActivity(Intent(this@ActivityHome, ActivityHome::class.java))
                     true
                 }
                 R.id.nav_profile -> {
                     // Handle Profile click
-                    startActivity(Intent(this@ActivityHome,ActivityCurrentUser::class.java))
+                    startActivity(Intent(this@ActivityHome, ActivityCurrentUser::class.java))
                     true
                 }
                 R.id.nav_settings -> {
                     // Handle Settings click
 
-                    startActivity(Intent(this@ActivityHome,ActivityAdminPanel::class.java))
+                    startActivity(Intent(this@ActivityHome, ActivityAdminPanel::class.java))
                     true
                 }
                 else -> false
@@ -85,6 +123,8 @@ class ActivityHome : AppCompatActivity() {
 
         // getting the recyclerview by its id
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        shimmer=findViewById(R.id.shimmer)
+        shimmer.startShimmer()
 
         recyclerView.layoutManager = layoutManager
 
@@ -100,6 +140,8 @@ class ActivityHome : AppCompatActivity() {
                             userArrayList.add(user!!)
                         }
                     }
+                    shimmer.stopShimmer()
+                    shimmer.visibility=View.GONE
                     // This will pass the ArrayList to our Adapter
                     val adapter = CustomAdapter(userArrayList)
 
@@ -125,6 +167,13 @@ class ActivityHome : AppCompatActivity() {
         })
 
 
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container,fragment)
+        transaction.commit()
     }
 
     // Override onSupportNavigateUp to open the drawer

@@ -1,10 +1,10 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.fashionhub.Utils
 import com.example.fashionhub.databinding.ActivityMainBinding
-import com.google.android.material.textview.MaterialTextView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {

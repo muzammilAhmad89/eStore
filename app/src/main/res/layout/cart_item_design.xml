@@ -2,12 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/_10sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_gravity="center_vertical"/>
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_60sdp"
-        app:cardElevation="@dimen/_5sdp">
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/_2sdp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -25,6 +32,7 @@
                 android:textStyle="bold"/>
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cartSize"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_15sdp"
                 android:layout_alignBottom="@+id/cartDescription"
@@ -33,15 +41,29 @@
                 android:text="size"
                 android:textColor="@color/grey" />
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cartPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_20sdp"
-                android:text="price in rupees"
+                android:text="123456789"
+                android:textColor="@color/primary"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@+id/imgCart"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="1" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="justfor checking......................"/>
+                android:layout_height="@dimen/_20sdp"
+                android:text="QTY:"
+                android:layout_toLeftOf="@+id/quantity"
+                android:layout_alignParentBottom="true"/>
+
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

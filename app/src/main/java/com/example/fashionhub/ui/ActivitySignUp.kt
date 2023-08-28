@@ -1,9 +1,11 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fashionhub.R
+import com.example.fashionhub.Utils
 import com.example.fashionhub.databinding.ActivitySignUpBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient

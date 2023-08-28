@@ -1,9 +1,10 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fashionhub.R
 import com.google.firebase.auth.FirebaseAuth
 
 class ActivitySplash : AppCompatActivity() {

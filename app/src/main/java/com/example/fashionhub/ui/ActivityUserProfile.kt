@@ -1,12 +1,12 @@
-package com.example.fashionhub.Ui
+package com.example.fashionhub.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fashionhub.R
 
-class ActivityCart : AppCompatActivity() {
+class ActivityUserProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart)
+        setContentView(R.layout.activity_current_user)
     }
 }

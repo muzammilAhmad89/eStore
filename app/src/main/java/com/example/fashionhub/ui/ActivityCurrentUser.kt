@@ -1,7 +1,8 @@
-package com.example.fashionhub
+package com.example.fashionhub.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.fashionhub.R
 
 class ActivityCurrentUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
