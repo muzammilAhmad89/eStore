@@ -1,4 +1,4 @@
-package com.example.FashionHub.ui
+package com.example.fashionHub.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,11 +12,11 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.FashionHub.adapters.CustomAdapter
+import com.example.fashionHub.adapters.CustomAdapter
 import com.facebook.shimmer.ShimmerFrameLayout
 import androidx.fragment.app.Fragment
-import com.example.FashionHub.data.Items
-import com.example.FashionHub.fragments.fragment_like
+import com.example.fashionHub.data.Items
+import com.example.fashionHub.fragments.fragment_like
 import com.example.fashionhub.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView

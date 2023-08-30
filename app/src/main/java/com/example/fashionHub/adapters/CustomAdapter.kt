@@ -1,11 +1,11 @@
-package com.example.FashionHub.adapters
+package com.example.fashionHub.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.FashionHub.data.Items
+import com.example.fashionHub.data.Items
 import com.example.fashionhub.R
 
 class CustomAdapter(private val mList: ArrayList<Items>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {

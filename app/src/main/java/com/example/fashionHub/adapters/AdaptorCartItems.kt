@@ -1,13 +1,13 @@
-package com.example.FashionHub.adapters
+package com.example.fashionHub.adapters
 
-import android.view.LayoutInflater
+import android.view.LayoutInflater.*
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.FashionHub.Model.ItemToCartModel
-import com.example.FashionHub.ui.ActivityCart
+import com.example.fashionHub.model.ItemToCartModel
+import com.example.fashionHub.ui.ActivityCart
 import com.example.fashionhub.R
 
 class AdaptorCartItems(private val itemsList: ArrayList<ItemToCartModel>) : RecyclerView.Adapter<AdaptorCartItems.ViewHolder>() {
@@ -17,7 +17,7 @@ class AdaptorCartItems(private val itemsList: ArrayList<ItemToCartModel>) : Recy
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view
         // that is used to hold list item
-        val view = LayoutInflater.from(parent.context)
+        val view = from(parent.context)
             .inflate(R.layout.cart_item_design, parent, false)
 
         return ViewHolder(view)
@@ -28,7 +28,7 @@ class AdaptorCartItems(private val itemsList: ArrayList<ItemToCartModel>) : Recy
 
         holder.product.text=itemsViewModel.name
         holder.size.text=itemsViewModel.size
-        holder.price.text=itemsViewModel.price.toString()
+        holder.price.text=itemsViewModel.price
         holder.quantity.text=itemsViewModel.quantity
 
         holder.radioButton.isChecked = itemsViewModel.isSelected

@@ -15,10 +15,10 @@
         android:theme="@style/Theme.FashionHub"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ActivityCart"
+            android:name="com.example.fashionHub.ui.ActivityCart"
             android:exported="false" />
         <activity
-            android:name=".ui.ActivitySplash"
+            android:name="com.example.fashionHub.ui.ActivitySplash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,22 +27,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ActivityAdminPanel"
+            android:name="com.example.fashionHub.ui.ActivityAdminPanel"
             android:exported="false" />
         <activity
-            android:name=".ui.ActivityItemDetails"
+            android:name="com.example.fashionHub.ui.ActivityItemDetails"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.example.fashionHub.ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ActivitySignUp"
+            android:name="com.example.fashionHub.ui.ActivitySignUp"
             android:exported="false" />
         <activity
-            android:name=".ui.ActivityCurrentUser"
+            android:name="com.example.fashionHub.ui.ActivityCurrentUser"
             android:exported="false" />
         <activity
-            android:name=".ui.ActivityHome"
+            android:name="com.example.fashionHub.ui.ActivityHome"
             android:exported="false" />
     </application>
 

@@ -1,12 +1,12 @@
-package com.example.FashionHub.ui
-import com.example.FashionHub.adapters.AdaptorCartItems
+package com.example.fashionHub.ui
+import com.example.fashionHub.adapters.AdaptorCartItems
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.FashionHub.Model.ItemToCartModel
+import com.example.fashionHub.model.ItemToCartModel
 import com.example.fashionhub.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -58,6 +58,7 @@ class ActivityCart : AppCompatActivity() {
         })
         // Calculate and display initial total price
         updateTotalPrice()
+        updateSelectedItemsTax()
     }
 
     fun updateTotalPrice() {
@@ -83,5 +84,23 @@ class ActivityCart : AppCompatActivity() {
         }
         return total
     }
+    private fun calculateSelectedItemsQuantity(): Int {
+        var totalQuantity = 0
+
+        for (item in userArrayList) {
+            if (item.isSelected) {
+                totalQuantity += item.quantity.toInt()
+                totalQuantity*=totalQuantity
+            }
+        }
+
+        return totalQuantity
+    }
+    fun updateSelectedItemsTax() {
+        val selectedItemsQuantity = calculateSelectedItemsQuantity()
+        val selectedItemsQuantityTextView: TextView = findViewById(R.id.gstPrice)
+        selectedItemsQuantityTextView.text = selectedItemsQuantity.toString()
+    }
+
 }
 

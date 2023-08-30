@@ -1,9 +1,9 @@
-package com.example.FashionHub.ui
+package com.example.fashionHub.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.FashionHub.Utils
+import com.example.fashionHub.Utils
 import com.example.fashionhub.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 

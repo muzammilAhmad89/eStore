@@ -1,4 +1,4 @@
-package com.example.FashionHub.ui
+package com.example.fashionHub.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
-import com.example.FashionHub.data.Items
-import com.example.FashionHub.Model.ItemToCartModel
+import com.example.fashionHub.data.Items
+import com.example.fashionHub.model.ItemToCartModel
 import com.example.fashionhub.R
 import com.example.fashionhub.databinding.ActivityItemDetailsBinding
 import com.google.firebase.FirebaseApp
