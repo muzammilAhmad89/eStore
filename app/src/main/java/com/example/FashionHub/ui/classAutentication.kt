@@ -1,8 +1,8 @@
-package com.example.fashionhub.ui
+package com.example.FashionHub.ui
 
 import android.content.Context
 import android.widget.Toast
-import com.example.fashionhub.Utils
+import com.example.FashionHub.Utils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlin.properties.Delegates

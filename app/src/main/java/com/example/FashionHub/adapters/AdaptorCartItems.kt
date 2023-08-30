@@ -1,15 +1,14 @@
-package com.example.fashionhub.adapters
+package com.example.FashionHub.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fashionhub.Model.ItemToCartModel
+import com.example.FashionHub.Model.ItemToCartModel
+import com.example.FashionHub.ui.ActivityCart
 import com.example.fashionhub.R
-import com.example.fashionhub.ui.ActivityCart
 
 class AdaptorCartItems(private val itemsList: ArrayList<ItemToCartModel>) : RecyclerView.Adapter<AdaptorCartItems.ViewHolder>() {
 

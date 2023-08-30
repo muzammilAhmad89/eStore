@@ -1,4 +1,4 @@
-package com.example.fashionhub.fragments
+package com.example.FashionHub.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

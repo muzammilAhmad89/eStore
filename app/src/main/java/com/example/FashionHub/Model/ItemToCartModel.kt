@@ -1,4 +1,4 @@
-package com.example.fashionhub.Model
+package com.example.FashionHub.Model
 
 data class ItemToCartModel(
     var name: String = "",

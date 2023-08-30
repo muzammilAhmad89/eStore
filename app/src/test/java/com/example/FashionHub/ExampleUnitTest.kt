@@ -1,4 +1,4 @@
-package com.example.fashionhub
+package com.example.FashionHub
 
 import org.junit.Test
 

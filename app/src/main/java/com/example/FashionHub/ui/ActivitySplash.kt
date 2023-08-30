@@ -1,4 +1,4 @@
-package com.example.fashionhub.ui
+package com.example.FashionHub.ui
 
 import android.content.Intent
 import android.os.Bundle

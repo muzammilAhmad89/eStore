@@ -1,10 +1,12 @@
-package com.example.fashionhub
+package com.example.FashionHub
 
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Window
+import com.example.fashionhub.R
+
 class Utils(val context: Context) {
 
     //lateinit var context: Context

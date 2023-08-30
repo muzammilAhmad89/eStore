@@ -1,12 +1,12 @@
-package com.example.fashionhub.ui
-import com.example.fashionhub.adapters.AdaptorCartItems
+package com.example.FashionHub.ui
+import com.example.FashionHub.adapters.AdaptorCartItems
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fashionhub.Model.ItemToCartModel
+import com.example.FashionHub.Model.ItemToCartModel
 import com.example.fashionhub.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

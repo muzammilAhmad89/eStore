@@ -1,4 +1,4 @@
-package com.example.fashionhub
+package com.example.FashionHub
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
